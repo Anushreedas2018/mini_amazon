@@ -1,0 +1,2 @@
+# miniamazon
+my project
