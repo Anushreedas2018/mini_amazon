@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block body%}
+
+<form action="/signup" method="post" id="form2">
+			<input type="text" name="username" placeholder="n"><br>
+			<input type="password" name="password"  placeholder="password"><br>
+			<input type="password" name="rpassword"placeholder="re-enter password"><br>
+			<input type="text" name="email"  placeholder="email"><br>
+			<input type="radio" name="ctype" value="buyer">Buyer<br>
+			<input type="radio" name="ctype" value="seller">Seller<br>
+		</form>
+{%end block body%}

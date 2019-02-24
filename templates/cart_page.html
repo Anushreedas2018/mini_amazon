@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block body %}
+
+<h1>My CArt</h1>
+
+{%if products is iterable%}
+
+	{%for product in products%}
+	<ul>
+		<li>{{product['name']}}</li>
+		<li>{{product['description']}}</li>
+		<li>{{product['price']}}</li>
+	</ul>
+
+	<form action="/remove_cart" method="POST">
+			<input type="hidden" name="product_id" value="{{product['_id']}}">
+			<input type="submit" name="submit" value="remove">
+
+		</form>
+	{% endfor %}
+{%else%}
+<p>There is nothing in your cart!!</p>
+{%endif%}
+{% endblock body %}
+
+	

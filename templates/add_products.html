@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block body%}
+
+<form action="/add_products" method="post" id="form4">
+			<input type="text" name="name" placeholder="name"><br>
+			<input type="text" name="product"  placeholder="product"><br>
+			<input type="text" name="price"placeholder="price"><br>
+			<input type="text" name="quantity" placeholder="quantity"><br>
+			
+</form>
+<button type="submit" form="form4" value="submit">Submit</button>
+{%endblock body%}

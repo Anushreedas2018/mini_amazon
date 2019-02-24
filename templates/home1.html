@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+</head>
+<body>
+<p>Enter the name of the city</p>
+<form action="{{url_for('weather_quote')}}" id="name" method="POST">
+	<input type="text" name="city">
+
+</form>
+<button type="submit" form="name">ASk WEather</button>
+</body>
+</html>

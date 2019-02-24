@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About</title>
+</head>
+<body>
+	{% if session['username'] %}
+	
+	
+	<a href="/logout">Log out</a>
+	{% else %}
+	<p>Guest user</p>
+	
+
+	{% endif %}
+	<h2>
+		One stop for all your shopping needs!
+	</h2>
+	<p>HAPPY SHOPPING Folks</p>
+	{%if not session["username"]%}
+	<p>New User?
+	
+		
+	<a href="/signup">Sign Up</a>
+	</p>
+        
+    
+
+
+
+	<h3>Sign in</h3>
+	
+	<form action="/login" method="post" id="form1">
+		<input type="text" name="username"><br>
+		<input type="password" name="password">
+		
+	</form>
+	<button type="submit" form="form1" value="Submit">Submit</button><br>
+	{%else%}
+	<p> Welcome {{ session['username'] }}</p>
+	{%endif%}
+
+	<br>
+	<br>
+
+	
+
+	<ul>
+	    <li><a href="/about">About MiniAmazon</a></li>
+	     <li><a href="/contact">My Contact</a></li>
+    </ul>
+
+</body>
+</html>

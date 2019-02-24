@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+	<p>Welcome {{session['username']}}</p>
+	<p>You have logged in as {{session['type']}}</p>
+
+	{%if session['type']=='seller'%}
+
+
+
+
+	<p><a href="/add_products">click here</a>to add products</p>
+	<p><a href="/sellerproducts">click here</a>to see the products added</p>
+
+	{%else%}
+	<p><a href="/products">click here</a>to see the products added</p>
+	<p><a href="/cart">click here</a>to go to your cart</p>
+
+
+	{%endif%}
+	<p><a href="/logout">logout</a></p>
+	<p><a href="/">home</a>
+
+{% endblock body%}

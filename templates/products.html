@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{%block body%}
+
+	{%for product in products%}
+	<ul>
+
+		<li>product name:{{product['name']}}</li>
+		<li>product description:{{product['description']}}</li>
+		<li>price:{{product['price']}}</li>
+		{%if session['type']=='buyer'%}
+		<li><b>sold by</b>:{{product['seller_name']}}</li><br>
+		{%endif%}
+
+		<form action="/add_cart" method="POST">
+			<input type="hidden" name="product_id" value="{{product['_id']}}">
+			<input type="submit" name="submit" value="buy">
+		</form>
+
+	
+		
+		
+	</ul>
+	<br>
+	<br>
+
+{%endfor%}
+{%endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
