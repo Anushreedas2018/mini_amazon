@@ -4,7 +4,7 @@
 
 <h1>My CArt</h1>
 
-{%if products is iterable%}
+{%if products|length%}
 
 	{%for product in products%}
 	<ul>
@@ -18,9 +18,12 @@
 			<input type="submit" name="submit" value="remove">
 
 		</form>
+
 	{% endfor %}
+
 {%else%}
 <p>There is nothing in your cart!!</p>
+
 {%endif%}
 {% endblock body %}
 

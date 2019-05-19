@@ -134,6 +134,7 @@ def remove_cart():
 	product_id=request.form['product_id']
 	remove_from_cart(session['username'],product_id)
 	return(redirect(url_for('cart')))
+	
 
 
 
